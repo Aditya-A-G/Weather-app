@@ -1,14 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="./index.js" defer></script>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css" />
     <title>Weather Condition</title>
-</head>
-<body>
-    
-</body>
+  </head>
+  <body>
+    <div class="main">
+      <div class="currentWeather">
+        <div class="headings">
+          <h4>Currently <span class="current-condition">Overcast</span></h4>
+          <h1 class="location">MUMBAI, INDIA</h1>
+        </div>
+        <div class="details">
+          <div class="degreeOrCelsius">
+            <h1><span class="current-temp">23</span> <sup class="temp-unit">°C</sup></h1>
+          </div>
+          <hr class="line"> 
+          <div class="otherDetails">
+            <p>
+              FEELS LIKE : <span class="feels-like">49 </span><sup class="feels-like-unit">°C</sup>
+            </p>
+            <p>HUMIDITY : <span class="humidity">49</span>%</p>
+            <p>WIND : <span class="wind">49</span>MPH</p>
+            <button class="toggle-btn">Toggle</button>
+          </div>
+        </div>
+      </div>
+      <div class="form">
+        <div class="wrapper">
+        <h3>Enter City Name -</h3>
+        <input type="text" class="weather-input">
+        <button class="submit-btn">Get Weather</button>
+    </div>
+
+      </div>
+    </div>
+  </body>
 </html>

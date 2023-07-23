@@ -9,6 +9,7 @@ const wind = document.querySelector(".wind");
 const toggleBtn = document.querySelector(".toggle-btn");
 const weatherInput = document.querySelector(".weather-input");
 const submitBtn = document.querySelector(".submit-btn");
+const currentTime = document.querySelector(".currentTime")
 
 submitBtn.addEventListener("click", setWeatherData);
 toggleBtn.addEventListener("click", toggleTempUnit);
@@ -37,6 +38,7 @@ async function setWeatherData() {
   try {
     resetTempUnit();
     const weatherData = await getWeatherData();
+    currentTime.textContent = weatherData.location.localtime;
     currentCondition.textContent = weatherData.current.condition.text;
     weatherLocation.textContent = weatherData.location.name + ", " + weatherData.location.country;
     currentTemp.textContent = weatherData.current.temp_c;
